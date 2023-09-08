@@ -245,10 +245,13 @@ spring:
 </p>
 
 <p>开始大刀阔斧修改</p>
-<h2><span id="需求">需求</span></h2><h3><span id="数据表设计">数据表设计</span></h3><p>[等待商讨]</p>
+<h2><span id="需求">需求</span></h2><h3><span id="数据表设计">数据表设计</span></h3><p><img src="https://oss.kimidayo.cn/202309081535350.webp" alt="项目原始数据表"></p>
+<p>本地数据库中重新设计数据表如下<br>[等待商讨]</p>
+<p><img src="https://oss.kimidayo.cn/202309081537812.webp" alt="数据库修改 Ver1.0"></p>
 <p>
 <img src="https://oss.kimidayo.cn/202309061410157.webp" width="500px" class="center rounded">
 </p>
+
 
 <pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 用户、部门、公司、集团、角色表
 create table yaogl_demo_user
@@ -380,15 +383,12 @@ create table yaogl_demo_user_dept
 
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3><span id="代码生成">代码生成</span></h3><p>首先配置数据源，然后在<code>数据模型设计</code>中添加对应的物理表，进行<code>模型匹配</code></p>
-<p><img src="https://oss.kimidayo.cn/202309081511446.webp" alt="数据模型设计"></p>
+<h3><span id="代码生成">代码生成</span></h3><p>首先配置<code>数据源</code>，然后在<code>数据模型设计</code>中添加对应的物理表，进行<code>模型匹配</code></p>
 <p>这里首先注意<code>包名</code>，其次<code>后端生成路径</code>是写项目根路径。</p>
-<p><img src="https://oss.kimidayo.cn/202309081512722.webp"></p>
-<p><img src="https://oss.kimidayo.cn/202309081512624.webp"></p>
+<p>例如: 
+包名 <code>org.springblade.demostructure</code><br>后端生成路径 <code>/User/leoua7/Projects/SAAS-AI/pigeon/aid-server</code><br>前端生成路径 <code>/User/leoua7/Projects/SAAS-AI/pigeon/aid-ui</code></p>
 <h3><span id="查验效果">查验效果</span></h3><p>运行自动生成的 <code>sql</code> 文件，重启前后端项目。查看效果, 在默认sql语句执行后会是在 <code>工作台</code>目录下。<br>我额外修改了菜单路径和图标 在数据表<code>blade_menu</code> 中</p>
-<p>
-<img src="https://oss.kimidayo.cn/202309081521188.webp" width class="center rounded" alt>
-</p>
+<p><img src="https://oss.kimidayo.cn/202309081521188.webp" width="300px" class="rounded" alt></p>
 
     </section>
   </div>
