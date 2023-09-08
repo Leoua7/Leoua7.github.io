@@ -1,0 +1,420 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sass-ai</title>
+
+  <!-- outside -->
+  <!-- require jquery-->
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+  <!-- require fancybox -->
+  <script src="https://cdn.kimidayo.cn/dist/fancybox/jquery.fancybox.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.kimidayo.cn/dist/fancybox/jquery.fancybox.min.css">
+  <!-- require APlayer -->
+  <script src="https://cdn.kimidayo.cn/dist/metingJS/APlayer.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.kimidayo.cn/dist/metingJS/APlayer.min.css">
+  <!-- require MetingJS -->
+  <script src="https://cdn.kimidayo.cn/dist/metingJS/Meting.min.js"></script>
+
+  <!-- local css -->
+  
+    
+      <link rel="stylesheet" href="/css/article.css">
+    
+      <link rel="stylesheet" href="/css/markdown.css">
+    
+      <link rel="stylesheet" href="/css/style.css">
+    
+  
+  <link rel="stylesheet" href="/css/print.css" media="print">
+
+  <!-- local js -->
+  
+    
+      <script src="/js/main.js"></script>
+    
+  
+<meta name="generator" content="Hexo 5.4.2"></head>
+<body>
+
+<div id="main">
+  <div id="menu">
+  
+    <a href="/">Home</a>
+  
+    <a href="/archives">Archives</a>
+  
+    <a href="/tags">Tags</a>
+  
+</div>
+
+  <div id="content">
+    
+<article id="post">
+  <div class="page-left">
+    
+<aside id="toc">
+  <!-- <strong class="toc-title">CONTENT</strong> -->
+  <!--<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">preface</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">chapter 1</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">chapter 2</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text">第一个 API</span></a></li><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text">需求</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-text">数据表设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-text">代码生成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link"><span class="toc-text">查验效果</span></a></li></ol></li></ol></li></ol>-->
+</aside>
+
+  </div>
+  <div id="page-ctn">
+    <header id="page-header">
+      <h3>
+        <svg viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"> <path fill-rule="evenodd" d="M3 5h4v1H3V5zm0 3h4V7H3v1zm0 2h4V9H3v1zm11-5h-4v1h4V5zm0 2h-4v1h4V7zm0 2h-4v1h4V9zm2-6v9c0 .55-.45 1-1 1H9.5l-1 1-1-1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h5.5l1 1 1-1H15c.55 0 1 .45 1 1zm-8 .5L7.5 3H2v9h6V3.5zm7-.5H9.5l-.5.5V12h6V3z"> </path> </svg>
+        sass-ai
+      </h3>
+    </header>
+    <section class="markdown-body">
+      <h1><span id="preface">preface</span></h1><p>基于 BladeX 文档的补充，记录自己做项目的过程</p>
+<p>前端代码: <a target="_blank" rel="noopener" href="http://bitbucket.baige.cloud:7990/projects/BGCLOUD/repos/aid-ui/browse">http://bitbucket.baige.cloud:7990/projects/BGCLOUD/repos/aid-ui/browse</a><br>后端代码: <a target="_blank" rel="noopener" href="http://bitbucket.baige.cloud:7990/projects/BGCLOUD/repos/aid-server/browse">http://bitbucket.baige.cloud:7990/projects/BGCLOUD/repos/aid-server/browse</a><br>文档地址: <a target="_blank" rel="noopener" href="http://git.baige.cloud:31000/sbin/Bladex_Doc">http://git.baige.cloud:31000/sbin/Bladex_Doc</a></p>
+<p><a target="_blank" rel="noopener" href="https://yaogl.notion.site/dbaae48717bc4e9f8d5518caf55c4238?v=54db8cb0e7c04276a6f2249f36228437&pvs=4">组织架构管理 流程</a>  (This link expires on -&gt;&gt; Oct 31)</p>
+<h1><span id="chapter-1">chapter 1</span></h1><p>Maven<br>MySQL<br>SSM + SpringBoot<br>MyBatisPlus<br>Lombok<br>Swagger</p>
+<h1><span id="chapter-2">chapter 2</span></h1><h2><span id="第一个-api">第一个 API</span></h2><p>新建 <code>Controller</code> -&gt; <code>org.springblade.Controller.DemoController</code></p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">@RestController
+@RequestMapping(&quot;api&quot;)
+public class DemoController &#123;
+
+    @GetMapping(&quot;hello&quot;)
+    public String hello(String name) &#123;
+        return &quot;Hello, &quot; + name;
+    &#125;
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>启动项目，GET 请求 <code>http://localhost:81/api/hello?name=yaoyao_qiekn</code>，返回如下结果</p>
+<pre class="line-numbers language-none"><code class="language-none">&#123;
+    &quot;code&quot;: 401,
+    &quot;success&quot;: false,
+    &quot;data&quot;: null,
+    &quot;msg&quot;: &quot;请求未授权&quot;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这里因为未授权的请求无法调用受保护的API，需要进行API鉴权</p>
+<pre class="line-numbers language-Java" data-language="Java"><code class="language-Java">package org.springblade.modules.auth.endpoint;
+
+@RequestMapping(AppConstant.APPLICATION_AUTH_NAME)
+@Api(value &#x3D; &quot;用户授权认证&quot;, tags &#x3D; &quot;授权接口&quot;)
+public class BladeTokenEndPoint &#123;
+
+	private final BladeRedis bladeRedis;
+	private final JwtProperties jwtProperties;
+
+	@ApiLog(&quot;登录用户验证&quot;)
+	@PostMapping(&quot;&#x2F;oauth&#x2F;token&quot;)
+    ...
+
+&#125;
+
+- - - - - - - - - - - - - - - - - - - - - - -
+
+package org.springblade.core.launch.constant;
+
+public interface AppConstant &#123;
+    ...
+
+    String APPLICATION_AUTH_NAME &#x3D; &quot;blade-auth&quot;;
+    ...
+&#125;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>通过看 controller 源码，确定认证的接口地址是 <code>/blade-auth/oauth/token</code>，按照文档提示在 postman 设置 <code>Headers</code> 和 <code>Body</code></p>
+<ul>
+<li>Headers</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Authorization</td>
+<td>Basic c2FiZXI6c2FiZXJfc2VjcmV0</td>
+</tr>
+<tr>
+<td>Tenant-Id</td>
+<td>000000</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><code>Authorization</code>的值是<code>blade_client</code>表的<code>client_id</code>、<code>client_secret</code>字段组合后转换成的Base64编码。<br>e.g. <code>saber:saber_secret</code> → base64  </p>
+</blockquote>
+<ul>
+<li>Body</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>grant_type</td>
+<td>password</td>
+</tr>
+<tr>
+<td>username</td>
+<td>admin</td>
+</tr>
+<tr>
+<td>password</td>
+<td>21232f297a57a5a743894a0e4a801fc3</td>
+</tr>
+<tr>
+<td>scope</td>
+<td>all</td>
+</tr>
+<tr>
+<td>tenantId</td>
+<td>000000</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>框架对密码进行了<strong>二次加密</strong>，由前端调用传参需要现将原密码进行<strong>md5</strong>加密后再进行传递<br>原密码是<code>admin</code>，所以md5加密后是<code>21232f297a57a5a743894a0e4a801fc3</code></p>
+</blockquote>
+<p>postman POST 请求，拿到返回结果</p>
+<pre class="line-numbers language-Json<!--&#123;&#123;&#123;-->" data-language="Json<!--&#123;&#123;&#123;-->"><code class="language-Json<!--&#123;&#123;&#123;-->">&#123;
+    &quot;tenant_id&quot;: &quot;000000&quot;,
+    &quot;user_id&quot;: &quot;1123598821738675201&quot;,
+    &quot;dept_id&quot;: &quot;1123598813738675201&quot;,
+    &quot;post_id&quot;: &quot;1123598817738675201&quot;,
+    &quot;role_id&quot;: &quot;1123598816738675201&quot;,
+    &quot;oauth_id&quot;: &quot;&quot;,
+    &quot;account&quot;: &quot;admin&quot;,
+    &quot;user_name&quot;: &quot;admin&quot;,
+    &quot;nick_name&quot;: &quot;管理员&quot;,
+    &quot;real_name&quot;: &quot;管理员&quot;,
+    &quot;role_name&quot;: &quot;administrator&quot;,
+    &quot;avatar&quot;: &quot;https:&#x2F;&#x2F;gw.alipayobjects.com&#x2F;zos&#x2F;rmsportal&#x2F;BiazfanxmamNRoxxVxka.png&quot;,
+    &quot;access_token&quot;: &quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJpc3N1c2VyIiwiYXVkIjoiYXVkaWVuY2UiLCJ0ZW5hbnRfaWQiOiIwMDAwMDAiLCJ1c2VyX25hbWUiOiJhZG1pbiIsInJlYWxfbmFtZSI6IueuoeeQhuWRmCIsInRva2VuX3R5cGUiOiJhY2Nlc3NfdG9rZW4iLCJyb2xlX25hbWUiOiJhZG1pbmlzdHJhdG9yIiwicG9zdF9pZCI6IjExMjM1OTg4MTc3Mzg2NzUyMDEiLCJ1c2VyX2lkIjoiMTEyMzU5ODgyMTczODY3NTIwMSIsInJvbGVfaWQiOiIxMTIzNTk4ODE2NzM4Njc1MjAxIiwibmlja19uYW1lIjoi566h55CG5ZGYIiwiZGV0YWlsIjp7InR5cGUiOiJ3ZWIifSwiZGVwdF9pZCI6IjExMjM1OTg4MTM3Mzg2NzUyMDEiLCJhY2NvdW50IjoiYWRtaW4iLCJjbGllbnRfaWQiOiJzYWJlciIsImV4cCI6MTY5MzgyNjQ0MCwibmJmIjoxNjkzODIyODQwfQ.N8hj-qWqEisGqHM6kDdE0O1r8eCY3d69B3AUrxZ91AM&quot;,
+    &quot;refresh_token&quot;: &quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJpc3N1c2VyIiwiYXVkIjoiYXVkaWVuY2UiLCJ1c2VyX2lkIjoiMTEyMzU5ODgyMTczODY3NTIwMSIsInJvbGVfaWQiOiIxMTIzNTk4ODE2NzM4Njc1MjAxIiwidG9rZW5fdHlwZSI6InJlZnJlc2hfdG9rZW4iLCJkZXB0X2lkIjoiMTEyMzU5ODgxMzczODY3NTIwMSIsImNsaWVudF9pZCI6InNhYmVyIiwiZXhwIjoxNjk0NDI3NjQwLCJuYmYiOjE2OTM4MjI4NDB9.eD9GUCBbtq634qgseRaUevFVyY95m1YGoB2ypBdOX-c&quot;,
+    &quot;token_type&quot;: &quot;bearer&quot;,
+    &quot;expires_in&quot;: 3600,
+    &quot;detail&quot;: &#123;
+        &quot;type&quot;: &quot;web&quot;
+    &#125;,
+    &quot;license&quot;: &quot;powered by bladex&quot;
+&#125;
+&#96;&#96;&#96;&lt;!--&#125;&#125;&#125;--&gt;
+
+回到第一个API上，&#96;Headers&#96; 内  
+1 设置请求头为&#96;Blade-Auth&#96;，请求头对应的值为  &#96;tokenType&#96; + &#96;&#39; &#39;&#96; + &#96;accessToken&#96; (就是中间用一个空格隔开)  
+2 设置请求头为 &#96;Authorization&#96; 值为 &#96;Basic 21232f297a57a5a743894a0e4a801fc3&#96;，这个和上面的 base64 一样
+
+GET 方法测试第一个API &#96;http:&#x2F;&#x2F;localhost:81&#x2F;hello&#x2F;hello?name&#x3D;yaoyao_qiekn&#96;
+
+&#96;Hello, yaoyao_qiekn&#96;
+
+Yeah! cpper 第一次写Java后端，迈出的第一小步。
+
+![2023-09-04 19:03:12](https:&#x2F;&#x2F;oss.kimidayo.cn&#x2F;202309041903126.webp)
+
+
+## 第一个CRUD
+
+结合框架已有的结构，选一个最简单的岗位管理，看一下怎删改查是如何实现的
+
+来看岗位表 -&gt; &#96;aid-server&#x2F;src&#x2F;main&#x2F;java&#x2F;org&#x2F;springblade&#x2F;modules&#x2F;system&#x2F;controller&#x2F;PostController.java&#96;
+
+&lt;p&gt;
+&lt;img src&#x3D;&quot;https:&#x2F;&#x2F;oss.kimidayo.cn&#x2F;202309051538664.webp&quot; width&#x3D;&quot;500px&quot; class&#x3D;&quot;center&quot;&gt;
+&lt;&#x2F;p&gt;
+
+一些小问题
+想要在本地部署，用本地的 MySQL 和 Redis，所以写了 &#96;application-local.yml&#96;，但是发现在 &#96;application.yml&#96; 中配置 &#96;spring.profiles.local&#96; 没有效果
+
+&#96;&#96;&#96;yaml
+spring:
+    profies:
+        local<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>源码中看到这里</p>
+<p><img src="https://oss.kimidayo.cn/202309051656549.webp"></p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/abcdefghqqcxz/article/details/126428279">https://blog.csdn.net/abcdefghqqcxz/article/details/126428279</a></p>
+</blockquote>
+<p>这里是只读，新添加文件行不通了。看了一下 <code>application-test.yml</code> 正好是 MySQL Redis 配置的都是本地，那就顺从这个吧~</p>
+<p>
+<img src="https://oss.kimidayo.cn/202309051703309.webp" width="700px" class="center">
+</p>
+
+<p>开始大刀阔斧修改</p>
+<h2><span id="需求">需求</span></h2><h3><span id="数据表设计">数据表设计</span></h3><p>[等待商讨]</p>
+<p>
+<img src="https://oss.kimidayo.cn/202309061410157.webp" width="500px" class="center rounded">
+</p>
+
+<pre class="line-numbers language-SQL" data-language="SQL"><code class="language-SQL">-- 用户、部门、公司、集团、角色表
+create table yaogl_demo_user
+(
+    ID          bigint                       not null comment &#39;主键&#39;
+        primary key,
+    parent_id   bigint      default 0        null comment &#39;父主键&#39;,
+    tenant_id   varchar(12) default &#39;000000&#39; null comment &#39;租户id&#39;,
+    user_type   int                          null comment &#39;用户平台&#39;,
+    code        varchar(12)                  null comment &#39;用户编号&#39;,
+    account     varchar(45)                  null comment &#39;账号&#39;,
+    password    varchar(45)                  null comment &#39;密码&#39;,
+    name        varchar(20)                  null comment &#39;昵称&#39;,
+    real_name   varchar(10)                  null comment &#39;姓名&#39;,
+    avatar      varchar(500)                 null comment &#39;头像&#39;,
+    email       varchar(45)                  null comment &#39;邮箱&#39;,
+    phone       varchar(45)                  null comment &#39;手机号码&#39;,
+    birthday    datetime                     null comment &#39;生日&#39;,
+    sex         int                          null comment &#39;性别&#39;,
+    role_id     varchar(1000)                null comment &#39;角色id&#39;,
+    dept_id     varchar(1000)                null comment &#39;部门id&#39;,
+    company_id  varchar(1000)                null comment &#39;公司ID&#39;,
+    group_id    varchar(1000)                null comment &#39;集团ID&#39;,
+    create_user bigint                       null comment &#39;创建人&#39;,
+    create_dept bigint                       null comment &#39;创建部门&#39;,
+    create_time datetime                     null comment &#39;创建时间&#39;,
+    update_user bigint                       null comment &#39;修改人&#39;,
+    update_time datetime                     null comment &#39;修改时间&#39;,
+    status      int                          null comment &#39;状态&#39;,
+    is_deleted  int         default 0        null comment &#39;是否已删除&#39;
+)
+    comment &#39;用户表&#39; collate &#x3D; utf8mb4_general_ci;
+
+create table yaogl_demo_dept
+(
+    ID          bigint                        not null comment &#39;主键&#39;
+        primary key,
+    dept_id     bigint       default 0        null comment &#39;部门id&#39;,
+    dept_name   varchar(255) default &#39;0&#39;      null comment &#39;部门名称&#39;,
+    parent_id   bigint       default 0        null comment &#39;父主键&#39;,
+    company_id  bigint       default 0        null comment &#39;所属公司id&#39;,
+    create_user varchar(255)                  null comment &#39;创建人&#39;,
+    create_time datetime                      null comment &#39;创建时间&#39;,
+    update_user varchar(255)                  null comment &#39;修改人&#39;,
+    update_time datetime                      null comment &#39;修改时间&#39;,
+    is_deleted  int                           null comment &#39;是否已删除&#39;,
+    create_dept bigint                        null comment &#39;创建部门&#39;,
+    status      int                           null comment &#39;状态&#39;,
+    tenant_id   varchar(12)  default &#39;000000&#39; null comment &#39;租户id&#39;,
+    code        varchar(12)                   null comment &#39;用户编号&#39;
+)
+    comment &#39;部门表&#39; collate &#x3D; utf8mb4_general_ci;
+
+create table yaogl_demo_company
+(
+    ID           bigint                        not null comment &#39;主键&#39;
+        primary key,
+    tenant_id    varchar(12)  default &#39;000000&#39; null comment &#39;租户id&#39;,
+    code         varchar(12)                   null comment &#39;用户编号&#39;,
+    company_id   bigint       default 0        null comment &#39;公司id&#39;,
+    company_name varchar(255) default &#39;0&#39;      null comment &#39;公司名称&#39;,
+    group_id     bigint                        null comment &#39;所属集团id&#39;,
+    create_user  varchar(255)                  null comment &#39;创建人&#39;,
+    create_dept  bigint                        null comment &#39;创建部门&#39;,
+    create_time  datetime                      null comment &#39;创建时间&#39;,
+    update_user  varchar(255)                  null comment &#39;修改人&#39;,
+    update_time  datetime                      null comment &#39;修改时间&#39;,
+    status       int                           null comment &#39;状态&#39;,
+    is_deleted   int          default 0        null comment &#39;是否已删除&#39;
+)
+    comment &#39;公司表&#39; collate &#x3D; utf8mb4_general_ci;
+
+create table yaogl_demo_group
+(
+    ID          bigint                        not null comment &#39;主键&#39;
+        primary key,
+    group_id    bigint       default 0        null comment &#39;集团id&#39;,
+    group_name  varchar(255) default &#39;0&#39;      null comment &#39;集团名称&#39;,
+    create_user varchar(255)                  null comment &#39;创建人&#39;,
+    create_time datetime                      null comment &#39;创建时间&#39;,
+    update_user varchar(255)                  null comment &#39;修改人&#39;,
+    update_time datetime                      null comment &#39;修改时间&#39;,
+    is_deleted  int          default 0        null comment &#39;是否已删除&#39;,
+    create_dept bigint                        null comment &#39;创建部门&#39;,
+    status      int                           null comment &#39;状态&#39;,
+    tenant_id   varchar(12)  default &#39;000000&#39; null comment &#39;租户id&#39;,
+    code        varchar(12)                   null comment &#39;用户编号&#39;
+)
+    comment &#39;集团表&#39; collate &#x3D; utf8mb4_general_ci;
+
+create table yaogl_demo_role
+(
+    ID          bigint                       not null comment &#39;主键&#39;
+        primary key,
+    tenant_id   varchar(12) default &#39;000000&#39; null comment &#39;租户ID&#39;,
+    code        varchar(12)                  null comment &#39;用户编号&#39;,
+    parent_id   bigint      default 0        null comment &#39;父主键&#39;,
+    role_name   varchar(255)                 null comment &#39;角色名&#39;,
+    role_alias  varchar(255)                 null comment &#39;角色别名&#39;,
+    sort        int                          null comment &#39;排序&#39;,
+    is_deleted  int         default 0        null comment &#39;是否已删除&#39;,
+    create_user varchar(255)                 null comment &#39;创建人&#39;,
+    create_dept bigint                       null comment &#39;创建部门&#39;,
+    create_time datetime                     null comment &#39;创建时间&#39;,
+    update_user varchar(255)                 null comment &#39;修改人&#39;,
+    update_time varchar(255)                 null comment &#39;修改时间&#39;,
+    status      int                          null comment &#39;状态&#39;
+)
+    comment &#39;角色表&#39; collate &#x3D; utf8mb4_general_ci;
+
+-- 中间表
+create table yaogl_demo_user_role
+(
+    ID      bigint           not null comment &#39;主键&#39;
+        primary key,
+    user_id bigint default 0 null comment &#39;用户id&#39;,
+    dept_id bigint default 0 null comment &#39;角色id&#39;
+)
+    comment &#39;用户角色表&#39; collate &#x3D; utf8mb4_general_ci;
+
+create table yaogl_demo_user_dept
+(
+    ID      bigint           not null comment &#39;主键&#39;
+        primary key,
+    user_id bigint default 0 null comment &#39;用户id&#39;,
+    dept_id bigint default 0 null comment &#39;部门id&#39;
+)
+    comment &#39;用户部门中间表&#39; collate &#x3D; utf8mb4_general_ci;
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3><span id="代码生成">代码生成</span></h3><p>首先配置数据源，然后在<code>数据模型设计</code>中添加对应的物理表，进行<code>模型匹配</code></p>
+<p><img src="https://oss.kimidayo.cn/202309081511446.webp" alt="数据模型设计"></p>
+<p>这里首先注意<code>包名</code>，其次<code>后端生成路径</code>是写项目根路径。</p>
+<p><img src="https://oss.kimidayo.cn/202309081512722.webp"></p>
+<p><img src="https://oss.kimidayo.cn/202309081512624.webp"></p>
+<h3><span id="查验效果">查验效果</span></h3><p>运行自动生成的 <code>sql</code> 文件，重启前后端项目。查看效果, 在默认sql语句执行后会是在 <code>工作台</code>目录下。<br>我额外修改了菜单路径和图标 在数据表<code>blade_menu</code> 中</p>
+<p>
+<img src="https://oss.kimidayo.cn/202309081521188.webp" width class="center rounded" alt>
+</p>
+
+    </section>
+  </div>
+</article>
+
+  </div>
+
+  <div id="bottom">
+    <!--
+      just want the page to be cleaner. > v <
+      If you are interested ...
+      site by leoua7 
+      using hexo
+      theme is customized from github markdown css
+    -->
+  </div>
+</div>
+
+<div id="eer">
+  <meting-js
+    server="netease"
+    type="playlist"
+    id="7687791695"
+    fixed="ture"
+    ></meting-js>
+</div>
+
+</body>
+</html>

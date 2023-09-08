@@ -1,0 +1,79 @@
+#toggle-theme {
+  float: left;
+  vertical-align: middle;
+  height: 24px;
+  font-size: 14px;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+#toggle-theme input,
+#toggle-theme span {
+  vertical-align: middle;
+}
+
+#page-ctn {
+  margin: 0 auto;
+  max-width: 900px;
+  color: var(--foreground-color);
+}
+
+#page-header,
+.markdown-body {
+  margin: 0 5px;
+}
+
+#page-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  background-color: var(--background-color);
+  border-color: var(--border-color);
+  border-style: solid;
+  border-width: 1px 1px 0;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  line-height: 24px;
+  /* font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; */
+}
+
+#page-header svg {
+  display: inline-block;
+  margin-right: 5px;
+  overflow: hidden;
+  fill: currentColor;
+}
+
+#page-header h3 {
+  display: flex;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-right: 16px;
+  font-size: 14px;
+  font-weight: 600;
+}
+@media screen and (min-width: calc(900px + (28px + 280px) * 2)) {
+/* header-post */
+#page-left {
+  position: fixed;
+  left: 2em;
+  overflow-x: hidden;
+}
+/* toc */
+#toc {
+  float: right;
+  clear: both;
+  overflow: auto;
+  max-width: 20em;
+}
+}
+
+#toc .toc-child {
+ padding-left: 2em;
+}
+
+#toc ol {
+  list-style-type: none; 
+}
+/* header-post end */

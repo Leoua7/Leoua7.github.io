@@ -1,0 +1,162 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>clu-clu-land</title>
+
+  <!-- outside -->
+  <!-- require jquery-->
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+  <!-- require fancybox -->
+  <script src="https://cdn.kimidayo.cn/dist/fancybox/jquery.fancybox.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.kimidayo.cn/dist/fancybox/jquery.fancybox.min.css">
+  <!-- require APlayer -->
+  <script src="https://cdn.kimidayo.cn/dist/metingJS/APlayer.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.kimidayo.cn/dist/metingJS/APlayer.min.css">
+  <!-- require MetingJS -->
+  <script src="https://cdn.kimidayo.cn/dist/metingJS/Meting.min.js"></script>
+
+  <!-- local css -->
+  
+    
+      <link rel="stylesheet" href="/css/article.css">
+    
+      <link rel="stylesheet" href="/css/markdown.css">
+    
+      <link rel="stylesheet" href="/css/style.css">
+    
+  
+  <link rel="stylesheet" href="/css/print.css" media="print">
+
+  <!-- local js -->
+  
+    
+      <script src="/js/main.js"></script>
+    
+  
+<meta name="generator" content="Hexo 5.4.2"></head>
+<body>
+
+<div id="main">
+  <div id="menu">
+  
+    <a href="/">Home</a>
+  
+    <a href="/archives">Archives</a>
+  
+    <a href="/tags">Tags</a>
+  
+</div>
+
+  <div id="content">
+    
+<article id="post">
+  <div class="page-left">
+    
+<aside id="toc">
+  <!-- <strong class="toc-title">CONTENT</strong> -->
+  <!--<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Clu-Clu-Land"><span class="toc-text">Clu Clu Land</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Secrets"><span class="toc-text">Secrets</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Recreation"><span class="toc-text">Recreation</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Custom-a-level"><span class="toc-text">Custom a level</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#pygame-controller-part-WIP"><span class="toc-text">pygame controller part (WIP)</span></a></li></ol></li></ol></li></ol></li></ol>-->
+</aside>
+
+  </div>
+  <div id="page-ctn">
+    <header id="page-header">
+      <h3>
+        <svg viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"> <path fill-rule="evenodd" d="M3 5h4v1H3V5zm0 3h4V7H3v1zm0 2h4V9H3v1zm11-5h-4v1h4V5zm0 2h-4v1h4V7zm0 2h-4v1h4V9zm2-6v9c0 .55-.45 1-1 1H9.5l-1 1-1-1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h5.5l1 1 1-1H15c.55 0 1 .45 1 1zm-8 .5L7.5 3H2v9h6V3.5zm7-.5H9.5l-.5.5V12h6V3z"> </path> </svg>
+        clu-clu-land
+      </h3>
+    </header>
+    <section class="markdown-body">
+      <h1 id="Clu-Clu-Land"><a href="#Clu-Clu-Land" class="headerlink" title="Clu Clu Land"></a>Clu Clu Land</h1><p><a target="_blank" rel="noopener" href="https://edgeemu.net/details-219341.htm">Clu Clu Land (World).nes</a></p>
+<p><a target="_blank" rel="noopener" href="https://gamefaqs.gamespot.com/nes/563396-clu-clu-land/faqs/72591"></a></p>
+<h2 id="Secrets"><a href="#Secrets" class="headerlink" title="Secrets"></a>Secrets</h2><p>9 Lives</p>
+<p>At the 1 Player&#x2F;2Players menu, hold on controller 2, Right, A &amp; B and press either A or B on controller 1 to start with 9 lives on 1 or 2 players mode.</p>
+<h2 id="Recreation"><a href="#Recreation" class="headerlink" title="Recreation"></a>Recreation</h2><p><code>python3</code></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/chadfraser/CluGame">https://github.com/chadfraser/CluGame</a></p>
+<p>A recreation of Clu Clu Land for the NES, made in pygame</p>
+<h4 id="Custom-a-level"><a href="#Custom-a-level" class="headerlink" title="Custom a level"></a>Custom a level</h4><p><img src="https://oss.kimidayo.cn/202307222055558.jpg"></p>
+<pre class="line-numbers language-none"><code class="language-none">HORSE &#x3D; BoardOneLevel([], [],
+                      [(4, 1), (7, 1), (3, 2), (5, 2), (6, 2), (8, 2), (5, 3), (6, 3), (4, 5), (7, 5), (3, 6), (5, 6),
+                      (6, 6), (8, 6), (4, 7), (5, 7), (6, 7), (7, 7)],
+                      [(4, 1), (5, 1), (7, 1), (8, 1), (3, 2), (9, 2), (3, 3), (9, 3), (3, 4), (5, 4), (7, 4), (9, 4),
+                      (3, 5), (6, 5), (9, 5), (4, 6), (8, 6)])
+SMELL &#x3D; BoardOneLevel([], [],
+                      [(5, 3), (3, 5), (3, 6), (6, 6), (3, 7)],
+                      [(3, 2), (4, 2), (5, 2), (6, 2), (3, 3), (4, 3), (6, 3), (3, 5), (5, 5), (6, 5), (7, 5), (4, 6),
+                      (5, 6), (7, 6)])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<p><code>java</code><br><a target="_blank" rel="noopener" href="https://github.com/chadfraser/CluGame-Java">https://github.com/chadfraser/CluGame-Java</a><br>A Java port of chadfraser’s pygame recreation of Clu Clu Land for the NES</p>
+<h4 id="pygame-controller-part-WIP"><a href="#pygame-controller-part-WIP" class="headerlink" title="pygame controller part (WIP)"></a>pygame controller part (WIP)</h4><p><a target="_blank" rel="noopener" href="https://deepinout.com/pygame/pygame-questions/16_pygame_how_to_get_usb_controllergamepad_to_work_with_python.html">PyGame 如何让USB控制器&#x2F;手柄与Python一起工作</a></p>
+<p>检测已连接手柄数量</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> pygame
+
+pygame<span class="token punctuation">.</span>joystick<span class="token punctuation">.</span>init<span class="token punctuation">(</span><span class="token punctuation">)</span>
+joystick_count <span class="token operator">=</span> pygame<span class="token punctuation">.</span>joystick<span class="token punctuation">.</span>get_count<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Detected &#123;&#125; USB controllers/gamepads"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>joystick_count<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>获取手柄输入并打印按钮状态</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> pygame
+
+pygame<span class="token punctuation">.</span>init<span class="token punctuation">(</span><span class="token punctuation">)</span>
+pygame<span class="token punctuation">.</span>joystick<span class="token punctuation">.</span>init<span class="token punctuation">(</span><span class="token punctuation">)</span>
+joystick <span class="token operator">=</span> pygame<span class="token punctuation">.</span>joystick<span class="token punctuation">.</span>Joystick<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+joystick<span class="token punctuation">.</span>init<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+axes <span class="token operator">=</span> joystick<span class="token punctuation">.</span>get_numaxes<span class="token punctuation">(</span><span class="token punctuation">)</span>
+buttons <span class="token operator">=</span> joystick<span class="token punctuation">.</span>get_numbuttons<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> event <span class="token keyword">in</span> pygame<span class="token punctuation">.</span>event<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> event<span class="token punctuation">.</span><span class="token builtin">type</span> <span class="token operator">==</span> pygame<span class="token punctuation">.</span>JOYAXISMOTION<span class="token punctuation">:</span>
+            <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>axes<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                axis <span class="token operator">=</span> joystick<span class="token punctuation">.</span>get_axis<span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+                <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Axis &#123;&#125; value: &#123;:.2f&#125;"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> axis<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">elif</span> event<span class="token punctuation">.</span><span class="token builtin">type</span> <span class="token operator">==</span> pygame<span class="token punctuation">.</span>JOYBUTTONDOWN<span class="token punctuation">:</span>
+            <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>buttons<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                button <span class="token operator">=</span> joystick<span class="token punctuation">.</span>get_button<span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+                <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Button &#123;&#125; value: &#123;&#125;"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> button<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-text" data-language="text"><code class="language-text">/* 测试按键 */
+B → 0
+A → 1
+Select → 8
+Start → 9
+left/right → axis 0
+up/down → axis 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>手柄控制角色移动</p>
+<p><a target="_blank" rel="noopener" href="http://programarcadegames.com/index.php?lang=cn&chapter=controllers_and_graphics">Program Arcade Games With Python And Pygame |  Chapter 10: 控制器和图形</a></p>
+
+    </section>
+  </div>
+</article>
+
+  </div>
+
+  <div id="bottom">
+    <!--
+      just want the page to be cleaner. > v <
+      If you are interested ...
+      site by leoua7 
+      using hexo
+      theme is customized from github markdown css
+    -->
+  </div>
+</div>
+
+<div id="eer">
+  <meting-js
+    server="netease"
+    type="playlist"
+    id="7687791695"
+    fixed="ture"
+    ></meting-js>
+</div>
+
+</body>
+</html>
